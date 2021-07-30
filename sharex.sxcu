@@ -1,0 +1,11 @@
+﻿{
+  "Version": "13.2.1",
+  "DestinationType": "URLShortener",
+  "RequestMethod": "POST",
+  "RequestURL": "https://examp.le/shorten.php",
+  "Body": "MultipartFormData",
+  "Arguments": {
+    "key": "CHANGEME",
+    "link": "$input$"
+  }
+}
