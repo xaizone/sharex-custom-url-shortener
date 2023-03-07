@@ -1,20 +1,14 @@
 <?php
 $config = include('config.php');
-if(!empty($_POST['link']) && $_POST['key'] == $config['secure_key'])
-{
+if(isset($_POST['link']) && filter_var($_POST['link'], FILTER_VALIDATE_URL) && $_POST['key'] == $config['key']) {
 	$id = bin2hex(openssl_random_pseudo_bytes(4));
-	$create = file_put_contents($config['folder'].$id, $_POST['link']);
-	if($create)
-	{
+	if(file_put_contents($config['folder'].$id, $_POST['link'])) {
 		echo $config['short_url'].$id;
-	}
-	else
-	{
-		echo "error couldnt create file";
+	} else {
+		echo "couldn't create file";
 	}
 }
-else
-{
-	echo "invalid link or password";
+else {
+	echo "invalid link or key";
 }
 ?>

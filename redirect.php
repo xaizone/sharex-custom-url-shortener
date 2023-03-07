@@ -1,22 +1,15 @@
 <?php
 $config = include('config.php');
-$redirect = $config['redir_url'];
-if(isset($_GET['id']))
-{
-	$id = $_GET['id'];
-	if(file_exists($config['folder'].$id))
-	{
-		$long_link = file_get_contents($config['folder'].$id);
-		header("location: $long_link"); 
-	}
-	else
-	{
-		header("location: $redirect");
+if(isset($_GET['id'])) {
+	if(file_exists($config['folder'].$_GET['id'])) {
+		$long_url = file_get_contents($config['folder'].$_GET['id']);
+		header("Location: $long_url");
+	} else {
+		header("Location: $config['redir_url']");
 	}
 
 }
-else
-{
-	header("location: $redirect");
+else {
+	header("Location: $config['redir_url']");
 }
 ?>

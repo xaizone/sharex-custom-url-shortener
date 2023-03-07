@@ -1,7 +1,7 @@
 <?php
 
 return array(
-    'secure_key' => 'CHANGEME',
+    'key' => 'CHANGEME',
 
     'folder' => 'url/',
 
