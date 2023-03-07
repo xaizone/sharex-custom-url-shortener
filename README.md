@@ -25,4 +25,4 @@ Once you have PHP server up and running, you can proceed further with the instal
 
 ## Apache
 
-If you are instead runnning Apache + PHP on your server, I've also included a `.htaccess` file that you can use. Just move it into your WWW root directory.
+If you are instead running Apache + PHP on your server, I've also included a `.htaccess` file that you can use.
