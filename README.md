@@ -14,7 +14,7 @@ Once you have PHP server up and running, you can proceed further with the instal
 
 ### Server
 1. Upload `shorten.php`, `redirect.php`, `robots.txt`, `config.php` to the web server's root directory.
-2. Create a folder where your URLs will be stored. (`mkdir -m 777 url`)
+2. Create a folder where your URLs will be stored. (`mkdir -m 775 url`)
 3. Edit `config.php`.
 4. Adjust `docker/nginx.conf` for your specific NGINX setup and move to a correct folder.
 
