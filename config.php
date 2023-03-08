@@ -3,7 +3,7 @@
 return array(
     'key' => 'CHANGEME',
 
-    'folder' => 'url/',
+    'folder' => 'url',
 
     'short_url' => 'https://examp.le/',
 
